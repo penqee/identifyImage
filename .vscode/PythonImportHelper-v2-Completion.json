@@ -1,0 +1,262 @@
+[
+    {
+        "label": "grpc",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "grpc",
+        "description": "grpc",
+        "detail": "grpc",
+        "documentation": {}
+    },
+    {
+        "label": "picture_pb2",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "picture_pb2",
+        "description": "picture_pb2",
+        "detail": "picture_pb2",
+        "documentation": {}
+    },
+    {
+        "label": "picture_pb2_grpc",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "picture_pb2_grpc",
+        "description": "picture_pb2_grpc",
+        "detail": "picture_pb2_grpc",
+        "documentation": {}
+    },
+    {
+        "label": "descriptor",
+        "importPath": "google.protobuf",
+        "description": "google.protobuf",
+        "isExtraImport": true,
+        "detail": "google.protobuf",
+        "documentation": {}
+    },
+    {
+        "label": "descriptor_pool",
+        "importPath": "google.protobuf",
+        "description": "google.protobuf",
+        "isExtraImport": true,
+        "detail": "google.protobuf",
+        "documentation": {}
+    },
+    {
+        "label": "symbol_database",
+        "importPath": "google.protobuf",
+        "description": "google.protobuf",
+        "isExtraImport": true,
+        "detail": "google.protobuf",
+        "documentation": {}
+    },
+    {
+        "label": "builder",
+        "importPath": "google.protobuf.internal",
+        "description": "google.protobuf.internal",
+        "isExtraImport": true,
+        "detail": "google.protobuf.internal",
+        "documentation": {}
+    },
+    {
+        "label": "torch",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "torch",
+        "description": "torch",
+        "detail": "torch",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "torchvision",
+        "description": "torchvision",
+        "isExtraImport": true,
+        "detail": "torchvision",
+        "documentation": {}
+    },
+    {
+        "label": "transforms",
+        "importPath": "torchvision",
+        "description": "torchvision",
+        "isExtraImport": true,
+        "detail": "torchvision",
+        "documentation": {}
+    },
+    {
+        "label": "transforms",
+        "importPath": "torchvision",
+        "description": "torchvision",
+        "isExtraImport": true,
+        "detail": "torchvision",
+        "documentation": {}
+    },
+    {
+        "label": "torch.nn",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "torch.nn",
+        "description": "torch.nn",
+        "detail": "torch.nn",
+        "documentation": {}
+    },
+    {
+        "label": "futures",
+        "importPath": "concurrent",
+        "description": "concurrent",
+        "isExtraImport": true,
+        "detail": "concurrent",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "io",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "io",
+        "description": "io",
+        "detail": "io",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "importPath": "resnet_model",
+        "description": "resnet_model",
+        "isExtraImport": true,
+        "detail": "resnet_model",
+        "documentation": {}
+    },
+    {
+        "label": "run",
+        "kind": 2,
+        "importPath": "client",
+        "description": "client",
+        "peekOfCode": "def run():\n    # 创建一个与服务器的通道\n    with grpc.insecure_channel('localhost:50051') as channel:\n        stub = picture_pb2_grpc.PictureConServiceStub(channel)\n        # 读取图像文件并发送请求\n        with open('./image/val_30.JPEG', 'rb') as f:\n            image_data = f.read()\n        request = picture_pb2.ImageRequest(image=image_data)\n        response = stub.GetImageVector(request)\n        print(\"Received vector: \", response.vector)",
+        "detail": "client",
+        "documentation": {}
+    },
+    {
+        "label": "_sym_db",
+        "kind": 5,
+        "importPath": "picture_pb2",
+        "description": "picture_pb2",
+        "peekOfCode": "_sym_db = _symbol_database.Default()\nDESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\\n\\rpicture.proto\\x12\\x0fpicturetovector\\\"\\x1d\\n\\x0cImageRequest\\x12\\r\\n\\x05image\\x18\\x01 \\x01(\\x0c\\\" \\n\\x0eVectorResponse\\x12\\x0e\\n\\x06vector\\x18\\x01 \\x03(\\x02\\x32\\x65\\n\\x11PictureConService\\x12P\\n\\x0eGetImageVector\\x12\\x1d.picturetovector.ImageRequest\\x1a\\x1f.picturetovector.VectorResponseB\\nZ\\x08../protob\\x06proto3')\n_globals = globals()\n_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)\n_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'picture_pb2', _globals)\nif _descriptor._USE_C_DESCRIPTORS == False:\n  _globals['DESCRIPTOR']._options = None\n  _globals['DESCRIPTOR']._serialized_options = b'Z\\010../proto'\n  _globals['_IMAGEREQUEST']._serialized_start=34\n  _globals['_IMAGEREQUEST']._serialized_end=63",
+        "detail": "picture_pb2",
+        "documentation": {}
+    },
+    {
+        "label": "DESCRIPTOR",
+        "kind": 5,
+        "importPath": "picture_pb2",
+        "description": "picture_pb2",
+        "peekOfCode": "DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\\n\\rpicture.proto\\x12\\x0fpicturetovector\\\"\\x1d\\n\\x0cImageRequest\\x12\\r\\n\\x05image\\x18\\x01 \\x01(\\x0c\\\" \\n\\x0eVectorResponse\\x12\\x0e\\n\\x06vector\\x18\\x01 \\x03(\\x02\\x32\\x65\\n\\x11PictureConService\\x12P\\n\\x0eGetImageVector\\x12\\x1d.picturetovector.ImageRequest\\x1a\\x1f.picturetovector.VectorResponseB\\nZ\\x08../protob\\x06proto3')\n_globals = globals()\n_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)\n_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'picture_pb2', _globals)\nif _descriptor._USE_C_DESCRIPTORS == False:\n  _globals['DESCRIPTOR']._options = None\n  _globals['DESCRIPTOR']._serialized_options = b'Z\\010../proto'\n  _globals['_IMAGEREQUEST']._serialized_start=34\n  _globals['_IMAGEREQUEST']._serialized_end=63\n  _globals['_VECTORRESPONSE']._serialized_start=65",
+        "detail": "picture_pb2",
+        "documentation": {}
+    },
+    {
+        "label": "_globals",
+        "kind": 5,
+        "importPath": "picture_pb2",
+        "description": "picture_pb2",
+        "peekOfCode": "_globals = globals()\n_builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)\n_builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'picture_pb2', _globals)\nif _descriptor._USE_C_DESCRIPTORS == False:\n  _globals['DESCRIPTOR']._options = None\n  _globals['DESCRIPTOR']._serialized_options = b'Z\\010../proto'\n  _globals['_IMAGEREQUEST']._serialized_start=34\n  _globals['_IMAGEREQUEST']._serialized_end=63\n  _globals['_VECTORRESPONSE']._serialized_start=65\n  _globals['_VECTORRESPONSE']._serialized_end=97",
+        "detail": "picture_pb2",
+        "documentation": {}
+    },
+    {
+        "label": "PictureConServiceStub",
+        "kind": 6,
+        "importPath": "picture_pb2_grpc",
+        "description": "picture_pb2_grpc",
+        "peekOfCode": "class PictureConServiceStub(object):\n    \"\"\"Missing associated documentation comment in .proto file.\"\"\"\n    def __init__(self, channel):\n        \"\"\"Constructor.\n        Args:\n            channel: A grpc.Channel.\n        \"\"\"\n        self.GetImageVector = channel.unary_unary(\n                '/picturetovector.PictureConService/GetImageVector',\n                request_serializer=picture__pb2.ImageRequest.SerializeToString,",
+        "detail": "picture_pb2_grpc",
+        "documentation": {}
+    },
+    {
+        "label": "PictureConServiceServicer",
+        "kind": 6,
+        "importPath": "picture_pb2_grpc",
+        "description": "picture_pb2_grpc",
+        "peekOfCode": "class PictureConServiceServicer(object):\n    \"\"\"Missing associated documentation comment in .proto file.\"\"\"\n    def GetImageVector(self, request, context):\n        \"\"\"Missing associated documentation comment in .proto file.\"\"\"\n        context.set_code(grpc.StatusCode.UNIMPLEMENTED)\n        context.set_details('Method not implemented!')\n        raise NotImplementedError('Method not implemented!')\ndef add_PictureConServiceServicer_to_server(servicer, server):\n    rpc_method_handlers = {\n            'GetImageVector': grpc.unary_unary_rpc_method_handler(",
+        "detail": "picture_pb2_grpc",
+        "documentation": {}
+    },
+    {
+        "label": "PictureConService",
+        "kind": 6,
+        "importPath": "picture_pb2_grpc",
+        "description": "picture_pb2_grpc",
+        "peekOfCode": "class PictureConService(object):\n    \"\"\"Missing associated documentation comment in .proto file.\"\"\"\n    @staticmethod\n    def GetImageVector(request,\n            target,\n            options=(),\n            channel_credentials=None,\n            call_credentials=None,\n            insecure=False,\n            compression=None,",
+        "detail": "picture_pb2_grpc",
+        "documentation": {}
+    },
+    {
+        "label": "add_PictureConServiceServicer_to_server",
+        "kind": 2,
+        "importPath": "picture_pb2_grpc",
+        "description": "picture_pb2_grpc",
+        "peekOfCode": "def add_PictureConServiceServicer_to_server(servicer, server):\n    rpc_method_handlers = {\n            'GetImageVector': grpc.unary_unary_rpc_method_handler(\n                    servicer.GetImageVector,\n                    request_deserializer=picture__pb2.ImageRequest.FromString,\n                    response_serializer=picture__pb2.VectorResponse.SerializeToString,\n            ),\n    }\n    generic_handler = grpc.method_handlers_generic_handler(\n            'picturetovector.PictureConService', rpc_method_handlers)",
+        "detail": "picture_pb2_grpc",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "resnet_model",
+        "description": "resnet_model",
+        "peekOfCode": "model = models.resnet50()\nmodel.load_state_dict(torch.load('resnet50-0676ba61.pth'))\nmodel.eval()\nmodel.fc = nn.Sequential()",
+        "detail": "resnet_model",
+        "documentation": {}
+    },
+    {
+        "label": "model.fc",
+        "kind": 5,
+        "importPath": "resnet_model",
+        "description": "resnet_model",
+        "peekOfCode": "model.fc = nn.Sequential()",
+        "detail": "resnet_model",
+        "documentation": {}
+    },
+    {
+        "label": "PictureConServiceServicer",
+        "kind": 6,
+        "importPath": "serve",
+        "description": "serve",
+        "peekOfCode": "class PictureConServiceServicer(picture_pb2_grpc.PictureConServiceServicer):\n    def GetImageVector(self, request, context):\n        image_bytes = request.image\n        image_tensor = preprocess_image(image_bytes).unsqueeze(0).to(device)\n        with torch.no_grad():\n            feature_vector = model(image_tensor).squeeze(0).cpu().numpy().tolist()\n        return picture_pb2.VectorResponse(vector=feature_vector)\ndef serve():\n    server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))\n    picture_pb2_grpc.add_PictureConServiceServicer_to_server(PictureConServiceServicer(), server)",
+        "detail": "serve",
+        "documentation": {}
+    },
+    {
+        "label": "preprocess_image",
+        "kind": 2,
+        "importPath": "serve",
+        "description": "serve",
+        "peekOfCode": "def preprocess_image(image_bytes):\n    preprocess = transforms.Compose([\n        transforms.Resize((224, 224)),\n        transforms.ToTensor(),\n        transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])\n    ])\n    image = Image.open(io.BytesIO(image_bytes)).convert('RGB')\n    image = preprocess(image)\n    return image\nclass PictureConServiceServicer(picture_pb2_grpc.PictureConServiceServicer):",
+        "detail": "serve",
+        "documentation": {}
+    },
+    {
+        "label": "serve",
+        "kind": 2,
+        "importPath": "serve",
+        "description": "serve",
+        "peekOfCode": "def serve():\n    server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))\n    picture_pb2_grpc.add_PictureConServiceServicer_to_server(PictureConServiceServicer(), server)\n    server.add_insecure_port('localhost:50051')\n    server.start()\n    server.wait_for_termination()\nif __name__ == '__main__':\n    serve()",
+        "detail": "serve",
+        "documentation": {}
+    },
+    {
+        "label": "device",
+        "kind": 5,
+        "importPath": "serve",
+        "description": "serve",
+        "peekOfCode": "device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nmodel.to(device)\n# 图片预处理函数\ndef preprocess_image(image_bytes):\n    preprocess = transforms.Compose([\n        transforms.Resize((224, 224)),\n        transforms.ToTensor(),\n        transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])\n    ])\n    image = Image.open(io.BytesIO(image_bytes)).convert('RGB')",
+        "detail": "serve",
+        "documentation": {}
+    }
+]
